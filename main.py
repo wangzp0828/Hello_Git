@@ -30,7 +30,7 @@ def get_weather():
   elif "晴" in weather1:
     weather1 += "  注意防晒，别晒黑了，小黑球"
   if temp1 >=24:
-    temp2 = "%.1f℃  适合穿短袖/短裤，但是不能穿的太凉快" %temp1
+    temp2 = "%.1f℃  适合穿短袖，但是不能穿的太凉快" %temp1
   elif temp1 >=15:
     temp2 = "%.1f℃  适合穿薄外套，注意不要感冒哦" %temp1
   else:
