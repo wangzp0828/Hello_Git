@@ -29,7 +29,7 @@ def get_weather():
     weather1 += "注意带伞，别淋湿了"
   elif "晴" in weather1:
     weather1 += "注意防晒，别晒黑了，小黑球"
-  return weather['weather'], math.floor(weather['temp'])
+  return weather1, math.floor(weather['temp'])
 
 def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
