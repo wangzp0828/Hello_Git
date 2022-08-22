@@ -29,7 +29,13 @@ def get_weather():
     weather1 += "  注意带伞，别淋湿了"
   elif "晴" in weather1:
     weather1 += "  注意防晒，别晒黑了，小黑球"
-  return weather1, math.floor(weather['temp'])
+  if temp1 >=24:
+    temp2 = "%.2f  适合穿短袖/短裤，但是不能穿的太凉快"
+  elif temp1 >=15:
+    temp2 = "%.2f  适合穿薄外套，注意不要感冒哦"
+  else:
+    temp2 = "%.2f  天气冷，要注意保暖哦"
+  return weather1, temp2
 
 def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
