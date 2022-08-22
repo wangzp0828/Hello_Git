@@ -37,7 +37,7 @@ def get_birthday():
 
 def get_back():
   next = datetime.strptime(str(date.today().year) + "-" + last_back, "%Y-%m-%d")
-  return next = (next-today).days
+  return (next-today).days
 
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
