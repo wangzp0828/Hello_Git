@@ -23,6 +23,12 @@ def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
   weather = res['data']['list'][0]
+  weather1 = weather['weather']
+  temp1 = math.floor(weather['temp'])
+  if "雨" in weather1:
+    weather1 += "注意带伞，别淋湿了"
+  else if "晴" in weather1:
+    weather1 += "注意防晒，别晒黑了，小黑球"
   return weather['weather'], math.floor(weather['temp'])
 
 def get_count():
