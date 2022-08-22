@@ -26,9 +26,9 @@ def get_weather():
   weather1 = weather['weather']
   temp1 = math.floor(weather['temp'])
   if "雨" in weather1:
-    weather1 += "注意带伞，别淋湿了"
+    weather1 += "  注意带伞，别淋湿了"
   elif "晴" in weather1:
-    weather1 += "注意防晒，别晒黑了，小黑球"
+    weather1 += "  注意防晒，别晒黑了，小黑球"
   return weather1, math.floor(weather['temp'])
 
 def get_count():
